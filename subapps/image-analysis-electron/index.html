@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Analysis Tool</title>
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <!-- Main container wrapping all content -->
+  <div class="main-container">
+    
+    <!-- Logo Section: displays your logo image -->
+    <div id="logo">
+      <img src="kaic.png" alt="Logo">
+    </div>
+    
+    <!-- Controls Section -->
+    <div id="controls">
+      <!-- Folder Input Group: input with button inside -->
+      <div class="folder-input mb-3">
+        <!-- hidden native picker -->
+        <input
+          type="file"
+          id="folderInput"
+          webkitdirectory
+          directory
+          multiple
+          hidden
+        >
+        <!-- styled label as button -->
+        <label for="folderInput" class="custom-file-label">
+          Choose Folder…
+        </label>
+        <!-- display chosen folder path -->
+        <div id="selected-folder" class="folder-path"></div>
+      </div>
+      <!-- Analyze Button Control Group -->
+      <div class="control-group">
+        <button id="analyzeBtn" class="btn-analyze">Analyze</button>
+      </div>
+    </div>
+    
+    <!-- Output Area -->
+    <div id="outputArea">
+      <textarea id="outputText" readonly></textarea>
+    </div>
+    
+    <!-- Total Count Display (moved out of textarea) -->
+    <div id="total-count" class="total-count"></div>
+    
+    <!-- Chart Container -->
+    <div id="chartContainer">
+      <div class="chartWrapper">
+        <canvas id="barChartCanvas"></canvas>
+      </div>
+      <div class="chartWrapper">
+        <canvas id="pieChartCanvas"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- External scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="renderer.js"></script>
+</body>
+</html>

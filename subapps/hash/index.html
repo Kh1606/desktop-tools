@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hash Maker Comparison</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Logo & title -->
+  <div id="logo-container">
+    <img src="logo.png" alt="Logo" id="logo">
+  </div>
+  <h1>Hash Maker</h1>
+
+  <!-- Two panels side by side -->
+  <div id="panels">
+    <!-- LEFT PANEL -->
+    <div class="panel" id="left-panel">
+      <h2>Left</h2>
+      <div class="controls">
+        <input type="file" id="fileInput-left" multiple hidden>
+        <input type="file" id="folderInput-left" webkitdirectory directory multiple hidden>
+        <button id="btn-select-files-left">Select File(s)</button>
+        <button id="btn-select-folder-left">Select Folder</button>
+        <button id="btn-calculate-left">Calculate Hash</button>
+        <button id="btn-save-left">Save Results</button>
+      </div>
+      <div class="file-list">
+        <h3>Selected Files/Folders:</h3>
+        <ul id="files-left"></ul>
+      </div>
+      <div class="results">
+        <h3>Results:</h3>
+        <textarea id="result-text-left" readonly></textarea>
+      </div>
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="panel" id="right-panel">
+      <h2>Right</h2>
+      <div class="controls">
+        <input type="file" id="fileInput-right" multiple hidden>
+        <input type="file" id="folderInput-right" webkitdirectory directory multiple hidden>
+        <button id="btn-select-files-right">Select File(s)</button>
+        <button id="btn-select-folder-right">Select Folder</button>
+        <button id="btn-calculate-right">Calculate Hash</button>
+        <button id="btn-save-right">Save Results</button>
+      </div>
+      <div class="file-list">
+        <h3>Selected Files/Folders:</h3>
+        <ul id="files-right"></ul>
+      </div>
+      <div class="results">
+        <h3>Results:</h3>
+        <textarea id="result-text-right" readonly></textarea>
+      </div>
+    </div>
+  </div>
+
+  <!-- Compare section -->
+  <div id="compare-section">
+    <button id="btn-compare">Compare</button>
+    <div id="compare-summary"></div>
+    <button id="btn-download-csv" style="display:none;">Download CSV</button>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>

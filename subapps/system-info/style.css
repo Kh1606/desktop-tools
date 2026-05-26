@@ -1,0 +1,198 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: url("bc_tt.png") no-repeat center center fixed;
+  background-size: cover;
+  padding: 20px;
+  margin: 0;
+}
+
+/* Container styles for all pages (bigger size for main features) */
+.container {
+  width: 90%;
+  max-width: 740px;
+  min-width: 320px;
+  margin: 40px auto;
+  background: rgba(255, 255, 255, 0.96);
+  padding: 36px 26px;
+  border-radius: 14px;
+  box-shadow: 0px 8px 24px rgba(0,0,0,0.10);
+}
+#manualPage.container {
+  max-width: 420px;
+  padding: 30px 18px;
+}
+
+#reviewPage.container {
+  max-width: 420px;
+  padding: 30px 18px;
+}
+
+/* Custom width for Drag & Drop page */
+#dragDropPage.container {
+  max-width: 70%;
+  max-height: 90%;
+  padding: 40px 30px;
+}
+
+/* Custom width for Download App page */
+
+#downloadAppPage.container {
+  margin-top: 10%;
+  max-width: 50%;
+  max-height: 90%;
+  padding: 54px 34px;
+}
+
+.download-app-btn-row {
+  display: flex;
+  justify-content: center;
+  gap: 38px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.os-download-btn {
+  margin-top: 200px;
+  width: 200px;
+  height: 200px;
+  border-radius: 22px;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.18s, box-shadow 0.18s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  margin: 0 50px;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.os-logo {
+  height: 46px;
+  width: 46px;
+  display: block;
+  margin: 0 auto 8px auto;
+  pointer-events: none;
+}
+
+.os-download-btn:active {
+  transform: scale(0.97);
+}
+
+.mac-btn {
+  background: linear-gradient(135deg, #a2aab9 0%, #e2e3e9 100%);
+  color: #222;
+}
+
+.mac-btn:hover:enabled {
+  box-shadow: 0 4px 18px #99aabb88;
+  background: linear-gradient(135deg, #818ca2 0%, #c5d0e0 100%);
+}
+
+.win-btn {
+  background: linear-gradient(135deg, #2994f2 0%, #70c7ff 100%);
+  color: #fff;
+}
+
+.win-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.win-btn:hover:enabled {
+  box-shadow: 0 4px 18px #2994f277;
+  background: linear-gradient(135deg, #1b70c9 0%, #7bd8ff 100%);
+}
+
+/* Custom width for Choose Input Method page */
+#choicePage.container {
+  margin-top: 10%;
+  max-width: 740px;
+  padding: 40px 30px;
+}
+#choicePage button {
+  width: 98%;
+  min-width: 220px;
+  max-width: 520px;
+  padding: 24px 0;
+  font-size: 20px;
+  margin: 30px auto;
+  display: block;
+}
+
+h2 {
+  margin-bottom: 18px;
+}
+
+input[type="text"], input[type="date"] {
+  width: 90%;
+  padding: 9px;
+  margin: 8px 0;
+  border: 1px solid #147fb1;
+  border-radius: 5px;
+  font-size: 15px;
+  transition: box-shadow 0.3s ease;
+}
+
+input:focus {
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.22);
+  outline: none;
+}
+
+button {
+  width: 94%;
+  padding: 11px;
+  border: none;
+  background: #3071b7;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 8px 0;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: #1310df;
+  transform: scale(1.04);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+.review-info {
+  text-align: left;
+  background: #e3e9f3;
+  margin: 18px 0;
+  padding: 15px 18px;
+  border-radius: 7px;
+  font-size: 15px;
+}
+
+/* Drag & Drop page: make drop zone bigger and clearer */
+#dropZone {
+  min-height: 220px;
+  font-size: 22px;
+}
+
+.custom-file-label {
+  display: inline-block;
+  background: #3071b7;
+  color: #fff;
+  padding: 11px 26px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 14px;
+  font-size: 15px;
+  transition: background 0.25s;
+}
+.custom-file-label:hover {
+  background: #1310df;
+}

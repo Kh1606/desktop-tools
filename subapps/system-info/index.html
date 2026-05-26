@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>System Info Tool</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+</head>
+<body>
+  <div id="choicePage" class="container">
+    <h2>Choose Input Method</h2>
+    <button id="manualBtn">Manual Input</button>
+    <button id="dragDropBtn">Drag & Drop Screenshot</button>
+    <button id="downloadAppBtn">Download App</button>
+    <button id="choiceBackBtn">Back</button>
+  </div>
+
+  <div id="manualPage" class="container" style="display:none;">
+    <h2>Manual System Info Input</h2>
+    <input type="text" id="customerName" placeholder="Name">
+    <input type="text" id="companyName" placeholder="Company Name">
+    <input type="date" id="testDate" placeholder="Date">
+    <input type="text" id="os" placeholder="OS">
+    <input type="text" id="cpu" placeholder="CPU">
+    <input type="text" id="ram" placeholder="RAM (GB)">
+    <input type="text" id="storage" placeholder="Storage (GB)">
+    <input type="text" id="gpu" placeholder="GPU">
+    <button id="doneBtn">Done</button>
+    <button id="manualBackBtn">Back</button> 
+  </div>
+
+  <div id="reviewPage" class="container" style="display:none;">
+    <h2>Review System Info</h2>
+    <div id="reviewInfo" class="review-info"></div>
+    <button id="sendBtn">Send System Information</button>
+    <button id="downloadImageBtn">Download as Image</button>
+    <button id="backBtn">Back</button>
+  </div>
+
+  <div id="dragDropPage" class="container" style="display:none;">
+    <h2>Upload Screenshot</h2>
+    <p>You can drag & drop your screenshot below, or choose a file.</p>
+    <label for="fileInput" class="custom-file-label">Choose Image</label>
+    <input type="file" id="fileInput" accept="image/*" style="display:none;">
+    <span id="fileName" style="display:block; margin-top:8px; color:#555; font-size:15px;"></span>
+
+    <div id="dropZone" style="border: 2px dashed #3071b7; border-radius: 8px; height:300px; display: flex; align-items: center; justify-content: center; background: #eef3fa; color: #666; font-size: 20px; margin-bottom: 20px;">
+      Drop your image here
+    </div>
+    <img id="previewImg" style="max-width:100%; max-height:140px; display:none; margin-bottom: 10px;" />
+    <button id="sendScreenshotBtn" disabled>Send Screenshot</button>
+    <button id="backToChoiceBtn">Back</button>
+  </div>
+
+  <!-- Download App Page -->
+<!-- Download App Page -->
+<div id="downloadAppPage" class="container" style="display:none;">
+  <h2>Download System Info App</h2>
+  <div class="download-app-btn-row">
+    <button id="downloadMacBtn" class="os-download-btn mac-btn">
+      <img src="apple.svg" alt="Apple Logo" class="os-logo" />
+      MacOS
+    </button>
+    <button id="downloadWinBtn" class="os-download-btn win-btn" >
+      <img src="windows.svg" alt="Windows Logo" class="os-logo" />
+      Windows
+    </button>
+  </div>
+  <button id="backToChoiceFromAppBtn" style="margin-top:32px;">Back</button>
+</div>
+
+
+  <script src="renderer.js"></script>
+</body>
+</html>

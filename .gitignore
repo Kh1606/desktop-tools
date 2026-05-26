@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+
+# Runtime upload storage (user files) — keep the folder, ignore its contents
+subapps/system-info/uploads/*
+!subapps/system-info/uploads/.gitkeep
+
+# Build output
+dist/
+build/
+out/
+
+# Logs / env
+*.log
+.env
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
