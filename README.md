@@ -1,8 +1,12 @@
-# desktop-tools
+# ToolDock
 
-A small **dashboard that launches a set of mini utility apps**. `launcher.html` is a
-Bootstrap landing page that links out to five self-contained tools, each living in
-its own folder under `subapps/`.
+A small **dashboard that launches a set of mini utility apps**. `index.html` is a
+Bootstrap landing page that links out to self-contained tools, each living in its
+own folder under `subapps/`.
+
+**🌐 Live demo:** <https://kh1606.github.io/tooldock/> — the four in-browser tools
+(audio, CSV analyser, hashing, image analysis). `system-info` needs its Express
+backend, so it's not part of the static demo.
 
 **Stack:** HTML/CSS/JS · Electron-style renderer scripts · Node/Express (for `system-info`)
 
