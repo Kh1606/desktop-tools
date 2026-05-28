@@ -8,6 +8,11 @@ own folder under `subapps/`.
 (audio, CSV analyser, hashing, image analysis). `system-info` needs its Express
 backend, so it's not part of the static demo.
 
+
+![How it works](docs/howitworks.png)
+
+*Rendered from [`docs/howitworks.py`](docs/howitworks.py) (Python `diagrams` library).*
+
 **Stack:** HTML/CSS/JS · Electron-style renderer scripts · Node/Express (for `system-info`)
 
 ## The tools
